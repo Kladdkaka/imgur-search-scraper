@@ -1,6 +1,9 @@
 import chalk from 'chalk'
 
 export default new class Logger {
+    _now() {
+        return moment().format('<Y-MM-DD> (HH:mm:ss)')
+    }
     info(message) {
         console.log(chalk`{reset ${this._now()}} | {black [{white Info}]}`, message)
     }
